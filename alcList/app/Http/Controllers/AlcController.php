@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class AlcController extends Controller
 {
-    public function index(Request $request) {
+    public function alcList(Request $request) {
         $items = DB::select('select * from alc');
-        return view('index', ['items' => $items]);
+        return view('alcList', ['items' => $items]);
     }
 }

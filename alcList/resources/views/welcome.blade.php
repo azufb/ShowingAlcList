@@ -35,7 +35,9 @@
                     @endif
                 </div>
             @endif
-            <div style='color: white;'>Alc</div>
+            <div style='color: white;'>
+                <a href="{{ url('/alc') }}">Alc</a>
+            </div>
         </div>
     </body>
 </html>
