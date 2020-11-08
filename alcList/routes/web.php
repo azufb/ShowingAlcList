@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('alc', 'App\Http\Controllers\AlcController@index');
+Route::get('alc', 'App\Http\Controllers\AlcController@alcList');
