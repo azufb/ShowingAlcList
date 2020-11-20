@@ -22,11 +22,16 @@
     </head>
     <body class="antialiased">
     <table>
-        <tr><th>name</th><th>type</th></tr>
+        <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>company</th>
+        </tr>
         @foreach ($items as $item)
         <tr>
             <td>{{ $item->name }}</td>
             <td>{{ $item->type }}</td>
+            <td>{{ $item->company }}</td>
         </tr>
         @endforeach
     </table>
