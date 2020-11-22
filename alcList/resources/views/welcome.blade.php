@@ -35,9 +35,14 @@
                     @endif
                 </div>
             @endif
+            <div id="app">
+                <example-component></example-component>
+            </div>
+            
             <div style='color: white;'>
                 <a href="{{ url('/alc') }}">Alc</a>
             </div>
         </div>
+        <script src=" {{ mix('js/app.js') }} "></script>
     </body>
 </html>
