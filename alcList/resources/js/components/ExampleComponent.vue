@@ -17,6 +17,9 @@
                                 <td>{{ list.name }}</td>
                                 <td>{{ list.type }}</td>
                                 <td>{{ list.company }}</td>
+                                <td>
+                                    <img :src="`${ list.pic }`" />
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -27,10 +30,13 @@
 </template>
 
 <script>
+
     export default {
+        name: 'app',
         data() {
             return {
-                lists: []
+                lists: [],
+                showContent: false
             };
         },
         mounted() {

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Alcohol List in Japan！！</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,52 +17,19 @@
         <style>
             body {
                 font-family: 'Nunito';
-                text-align: center;
-                background-image: url('/images/nihonchizu-dot.png');
-                background-repeat: no-repeat;
-                background-position: 50% -110%;
             }
-
-            h1 {
-                text-align: center;
-            }
-
-            .content {
-                display: inline-block;
-                text-align: center;
-            }
-
-            .topDesc {
-                border: 2px solid black;
-                display: inline-block;
-                margin-top: 100px;
-            }
-
-            p {
-                text-align: left;
-                padding: 10px;
-            }
-
-            .link {
-                text-align: right;
-            }
-
         </style>
     </head>
     <body class="antialiased">
-        <h1>Alcohol List in Japan！！</h1>
-        <div class="content">
-            <div class="topDesc">
-                <p>
-                    日本に存在するアルコール飲料をデータベースにして、一覧で表示！<br>
-                    ビール、新ジャンル、チューハイ、ノンアルコール、焼酎を主に掲載。<br>
-                    ワイン・日本酒・ウイスキーがお好みの方、すみません...。いつか追加します笑
-                </p>
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+            <div id="app">
+                <example-component></example-component>
             </div>
-
-            <div class="link">
-                <a href="{{ url('/alcList') }}">一覧を見てみる！→</a>
+            
+            <div style='color: white;'>
+                <a href="{{ url('/') }}">TOPに戻る</a>
             </div>
         </div>
+        <script src=" {{ mix('js/app.js') }} "></script>
     </body>
 </html>
