@@ -35,6 +35,7 @@
                     @endif
                 </div>
             @endif
+            <?php echo '<script>alert("Welcome to Geeks for Geeks")</script>'; ?>
             <div id="app">
                 <example-component></example-component>
             </div>

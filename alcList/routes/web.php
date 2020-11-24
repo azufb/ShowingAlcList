@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('alc', 'App\Http\Controllers\AlcController@alcList');
+
+Route::get('api/alc', 'App\Http\Controllers\Api\AlcController@alcList');
