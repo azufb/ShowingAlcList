@@ -3,10 +3,22 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
+                    <h1>アルコール一覧表</h1>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>No.</th>
+                                <th>名前</th>
+                                <th>タイプ</th>
+                                <th>会社名</th>
+                            </tr>
+                            <tr v-for="(list, index) in lists" :key="index">
+                                <td>{{ index+1 }}</td>
+                                <td>{{ list.name }}</td>
+                                <td>{{ list.type }}</td>
+                                <td>{{ list.company }}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -16,8 +28,21 @@
 
 <script>
     export default {
+        data() {
+            return {
+                lists: []
+            };
+        },
         mounted() {
-            console.log('Component mounted.')
+            axios
+                .get("/api/alc")
+                .then(response => (this.lists = response.data.lists))
         }
     }
 </script>
+
+<style>
+.container {
+    background-color: white;
+}
+</style>
