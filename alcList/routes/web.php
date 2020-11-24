@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/alcList', function() {
+    return view('alcList');
+});
+
 Route::get('alc', 'App\Http\Controllers\AlcController@alcList');
 
 Route::get('api/alc', 'App\Http\Controllers\Api\AlcController@alcList');

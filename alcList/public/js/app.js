@@ -1936,10 +1936,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'app',
   data: function data() {
     return {
-      lists: []
+      lists: [],
+      showContent: false
     };
   },
   mounted: function mounted() {
@@ -38208,7 +38213,9 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [_vm._v(_vm._s(list.type))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(list.company))])
+                    _c("td", [_vm._v(_vm._s(list.company))]),
+                    _vm._v(" "),
+                    _c("td", [_c("img", { attrs: { src: "" + list.pic } })])
                   ])
                 })
               ],
