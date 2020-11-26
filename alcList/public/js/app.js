@@ -6398,7 +6398,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container {\n    background-color: white;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n    background-color: white;\n}\nimg {\n    -o-object-fit: cover;\n       object-fit: cover;\n    width: 150px;\n    height: 200px;\n}\n", ""]);
 
 // exports
 

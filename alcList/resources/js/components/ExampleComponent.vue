@@ -51,4 +51,10 @@
 .container {
     background-color: white;
 }
+
+img {
+    object-fit: cover;
+    width: 150px;
+    height: 200px;
+}
 </style>
