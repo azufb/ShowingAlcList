@@ -4,10 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Alcohol List in Japan！！</title>
+        <title>お酒図鑑 in Japan</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/aeef7d63d2.js" crossorigin="anonymous"></script>
 
         <!-- Styles -->
         <style>
@@ -25,6 +29,7 @@
 
             h1 {
                 text-align: center;
+                font-family: 'Kosugi Maru', sans-serif;
             }
 
             .content {
@@ -50,18 +55,18 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>Alcohol List in Japan！！</h1>
+        <h1>お酒図鑑 in Japan</h1>
         <div class="content">
             <div class="topDesc">
                 <p>
-                    日本に存在するアルコール飲料をデータベースにして、一覧で表示！<br>
-                    ビール、新ジャンル、チューハイ、ノンアルコール、焼酎を主に掲載。<br>
+                    日本で販売されているお酒をデータベースにして、図鑑にしました。<br>
+                    ビール、新ジャンル、チューハイ、ノンアルコール、焼酎を主に掲載しています。<br>
                     ワイン・日本酒・ウイスキーがお好みの方、すみません...。いつか追加します笑
                 </p>
             </div>
 
             <div class="link">
-                <a href="{{ url('/alcList') }}">一覧を見てみる！→</a>
+                <a href="{{ url('/alcList') }}">図鑑を見てみる！<i class="fas fa-hand-point-right"></i></a>
             </div>
         </div>
     </body>
