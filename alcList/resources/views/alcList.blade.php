@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>図鑑 | お酒図鑑 in Japan</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/aeef7d63d2.js" crossorigin="anonymous"></script>
 
         <!-- Styles -->
         <style>
@@ -18,15 +19,28 @@
             body {
                 font-family: 'Nunito';
             }
+
+            .backToTop {
+                color: white;
+                margin-left: 20px;
+            }
+
+            .backToTopB {
+                color: white;
+                text-align: right;
+                margin-right: 20px;
+            }
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div class="relative items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+            <div class="backToTop">
+                <a href="{{ url('/') }}">TOPに戻る</a>
+            </div>
             <div id="app">
                 <example-component></example-component>
             </div>
-            
-            <div style='color: white;'>
+            <div class="backToTopB">
                 <a href="{{ url('/') }}">TOPに戻る</a>
             </div>
         </div>

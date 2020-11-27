@@ -1953,6 +1953,14 @@ __webpack_require__.r(__webpack_exports__);
     axios.get("/api/alc").then(function (response) {
       return _this.lists = response.data.lists;
     });
+  },
+  methods: {
+    scrollTop: function scrollTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant"
+      });
+    }
   }
 });
 
@@ -6395,10 +6403,10 @@ __webpack_require__.r(__webpack_exports__);
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap);", ""]);
 
 // module
-exports.push([module.i, "\n.container {\n    background-color: white;\n}\nimg {\n    -o-object-fit: cover;\n       object-fit: cover;\n    width: 150px;\n    height: 200px;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n    background-color: white;\n}\nh1 {\n    text-align: center;\n    font-family: 'Kosugi Maru', sans-serif;\n}\ntable {\n    margin-left: auto;\n    margin-right: auto;\n    border-collapse: collapse;\n}\ntable th {\n    border: 1px solid black;\n}\ntable tr {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n    border-bottom: 1px solid black;\n}\ntable td {\n    border: 1px solid black;\n}\n.number {\n    text-align: center;\n}\n.type {\n    text-align: center;\n}\n.company {\n    text-align: center;\n}\nimg {\n    -o-object-fit: cover;\n       object-fit: cover;\n    width: 150px;\n    height: 250px;\n}\n.Page-Btn{\n  position: fixed;\n  right: 20px;\n  bottom: 30px;\n  width: 60px;\n  height: 60px;\n  line-height: 80px;\n  text-align: center;\n  border-radius: 50%;\n  background: rgba(26,32,44,var(--bg-opacity));\n  color: white;\n}\n", ""]);
 
 // exports
 
@@ -38195,34 +38203,38 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("h1", [_vm._v("アルコール一覧表")]),
+      _c("h1", [_vm._v("ー 図鑑 ー")]),
+      _vm._v(" "),
+      _c(
+        "table",
+        [
+          _vm._m(0),
           _vm._v(" "),
-          _c("div", [
-            _c(
-              "table",
-              [
-                _vm._m(0),
-                _vm._v(" "),
-                _vm._l(_vm.lists, function(list, index) {
-                  return _c("tr", { key: index }, [
-                    _c("td", [_vm._v(_vm._s(index + 1))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(list.name))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(list.type))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(list.company))]),
-                    _vm._v(" "),
-                    _c("td", [_c("img", { attrs: { src: "" + list.pic } })])
-                  ])
-                })
-              ],
-              2
-            )
-          ])
-        ])
+          _vm._l(_vm.lists, function(list, index) {
+            return _c("tr", { key: index }, [
+              _c("td", { staticClass: "number" }, [_vm._v(_vm._s(index + 1))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(list.name))]),
+              _vm._v(" "),
+              _c("td", { staticClass: "type" }, [_vm._v(_vm._s(list.type))]),
+              _vm._v(" "),
+              _c("td", { staticClass: "company" }, [
+                _vm._v(_vm._s(list.company))
+              ]),
+              _vm._v(" "),
+              _c("td", [_c("img", { attrs: { src: "" + list.pic } })])
+            ])
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "Page-Btn", on: { click: _vm.scrollTop } }, [
+        _c("i", { staticClass: "fas fa-chevron-up fa-3x" })
       ])
     ])
   ])
@@ -38239,7 +38251,9 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("th", [_vm._v("タイプ")]),
       _vm._v(" "),
-      _c("th", [_vm._v("会社名")])
+      _c("th", [_vm._v("会社名")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("画像")])
     ])
   }
 ]
