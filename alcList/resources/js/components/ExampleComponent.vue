@@ -35,8 +35,7 @@
         name: 'app',
         data() {
             return {
-                lists: [],
-                showContent: false
+                lists: []
             };
         },
         mounted() {
