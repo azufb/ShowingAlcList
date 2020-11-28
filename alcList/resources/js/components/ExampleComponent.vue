@@ -38,12 +38,16 @@
                 lists: []
             };
         },
-        mounted() {
-            axios
-                .get("/api/alc")
-                .then(response => (this.lists = response.data.lists))
+        createtd() {
+            this.request()
         },
         methods: {
+            request: function() {
+                axios.get('/api/alc').then((response) => {
+                    this.lists = response.data.lists
+                })
+                    .catch(error => console.log(error))
+            },
             scrollTop: function() {
                 window.scrollTo({
                     top: 0,
