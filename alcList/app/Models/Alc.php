@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alc extends Model
 {
-    protected $table = 'alc';
+    public $table = 'alc';
     
 }
